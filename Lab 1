@@ -1,0 +1,51 @@
+from collections import defaultdict, Counter
+from statistics import mode, StatisticsError
+
+# Sample data: {member_id: [list_of_books_borrowed]}
+borrow_records = {
+    "M001": ["B001", "B002", "B003"],
+    "M002": ["B001", "B002"],
+    "M003": [],
+    "M004": ["B002", "B003", "B003"],
+    "M005": []
+}
+
+# Flatten all book borrowings to analyze book stats
+all_borrowed_books = []
+total_borrowed_books = 0
+members_with_zero_borrow = 0
+
+for books in borrow_records.values():
+    total_borrowed_books += len(books)
+    all_borrowed_books.extend(books)
+    if len(books) == 0:
+        members_with_zero_borrow += 1
+
+# 1. Average number of books borrowed per member
+average_books_per_member = total_borrowed_books / len(borrow_records)
+
+# 2. Find the book with the highest and lowest number of borrowings
+book_borrow_count = Counter(all_borrowed_books)
+
+if book_borrow_count:
+    most_borrowed_book = book_borrow_count.most_common(1)[0]
+    least_borrowed_book = min(book_borrow_count.items(), key=lambda x: x[1])
+else:
+    most_borrowed_book = ("None", 0)
+    least_borrowed_book = ("None", 0)
+
+# 3. Number of members who have not borrowed any books
+# Already calculated as members_with_zero_borrow
+
+# 4. Most frequently borrowed book (mode)
+try:
+    borrow_mode = mode(all_borrowed_books)
+except StatisticsError:
+    borrow_mode = "No unique mode"
+
+# Display Results
+print("Average number of books borrowed per member:", average_books_per_member)
+print("Most borrowed book:", most_borrowed_book)
+print("Least borrowed book:", least_borrowed_book)
+print("Number of members who borrowed no books:", members_with_zero_borrow)
+print("Most frequently borrowed book (mode):", borrow_mode)
