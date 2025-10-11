@@ -1,0 +1,62 @@
+class TextEditor:
+    def __init__(self):
+        self.current_state = ""
+        self.undo_stack = []
+        self.redo_stack = []
+
+    def make_change(self, new_text):
+        self.undo_stack.append(self.current_state)
+        self.redo_stack.clear()
+        self.current_state = new_text
+        print("Change made.")
+
+    def undo(self):
+        if not self.undo_stack:
+            print("Nothing to undo.")
+            return
+        self.redo_stack.append(self.current_state)
+        self.current_state = self.undo_stack.pop()
+        print("Undo performed.")
+
+    def redo(self):
+        if not self.redo_stack:
+            print("Nothing to redo.")
+            return
+        self.undo_stack.append(self.current_state)
+        self.current_state = self.redo_stack.pop()
+        print("Redo performed.")
+
+    def display(self):
+        print(f"Document State: '{self.current_state}'")
+
+
+# ----- Menu-Driven Interface -----
+def menu():
+    editor = TextEditor()
+
+    while True:
+        print("\n--- Text Editor Menu ---")
+        print("1. Make Change")
+        print("2. Undo")
+        print("3. Redo")
+        print("4. Display Document State")
+        print("5. Exit")
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == '1':
+            new_text = input("Enter new text: ")
+            editor.make_change(new_text)
+        elif choice == '2':
+            editor.undo()
+        elif choice == '3':
+            editor.redo()
+        elif choice == '4':
+            editor.display()
+        elif choice == '5':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice! Please enter 1-5.")
+
+# Run the menu
+menu()
