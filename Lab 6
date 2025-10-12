@@ -1,0 +1,81 @@
+class LinearProbingHashTable:
+    def __init__(self, size=10):
+        self.size = size
+        self.table = [None] * size
+
+    def hash_function(self, key):
+        return key % self.size
+
+    def insert(self, key):
+        index = self.hash_function(key)
+        start_index = index
+        while self.table[index] is not None:
+            if self.table[index] == key:
+                print(f"Key {key} already exists at index {index}.")
+                return
+            index = (index + 1) % self.size
+            if index == start_index:  # Table is full
+                print("Hash table is full! Cannot insert key.")
+                return
+        self.table[index] = key
+        print(f"Key {key} inserted at index {index}.")
+
+    def search(self, key):
+        index = self.hash_function(key)
+        start_index = index
+        while self.table[index] is not None:
+            if self.table[index] == key:
+                print(f"Key {key} found at index {index}.")
+                return index
+            index = (index + 1) % self.size
+            if index == start_index:
+                break
+        print(f"Key {key} not found.")
+        return None
+
+    def delete(self, key):
+        index = self.search(key)
+        if index is not None:
+            self.table[index] = None
+            print(f"Key {key} deleted from index {index}.")
+        else:
+            print(f"Key {key} not found, cannot delete.")
+
+    def display(self):
+        print("Hash Table:")
+        for i, key in enumerate(self.table):
+            print(f"Index {i}: {key}")
+
+
+# ----- Menu-Driven Interface -----
+def menu():
+    ht = LinearProbingHashTable()
+
+    while True:
+        print("\n--- Linear Probing Hash Table Menu ---")
+        print("1. Insert Key")
+        print("2. Search Key")
+        print("3. Delete Key")
+        print("4. Display Table")
+        print("5. Exit")
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == '1':
+            key = int(input("Enter key to insert: "))
+            ht.insert(key)
+        elif choice == '2':
+            key = int(input("Enter key to search: "))
+            ht.search(key)
+        elif choice == '3':
+            key = int(input("Enter key to delete: "))
+            ht.delete(key)
+        elif choice == '4':
+            ht.display()
+        elif choice == '5':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice! Please enter 1-5.")
+
+# Run the menu
+menu()
