@@ -10,6 +10,7 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | Arrays & Hashing | Easy | [Python](leetcode/0001_two_sum.py) | $O(n)$ | $O(n)$ | 2026-09-08 |
 | 0217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Arrays & Hashing | Easy | [Python](leetcode/0217_contains_duplicate.py) | $O(n)$ | $O(n)$ | 2026-09-09 |
+| 0242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Arrays & Hashing | Easy | [Python](leetcode/0242_valid_anagram.py) | $O(n)$ | $O(1)$ | 2026-09-10 |
 
 ---
 
