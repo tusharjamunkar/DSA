@@ -34,3 +34,12 @@ def test_suite_valid_anagram():
     assert sol.isAnagram("rat", "car") is False
     assert sol.isAnagramUnicode("café", "féca") is True
     assert sol.isAnagramCounter("hello", "olleh") is True
+
+
+def test_suite_group_anagrams():
+    mod = importlib.import_module("leetcode.0049_group_anagrams")
+    sol = mod.Solution()
+    res = sol.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
+    canonical = sorted([sorted(g) for g in res])
+    expected = sorted([["bat"], ["nat", "tan"], ["ate", "eat", "tea"]])
+    assert canonical == expected
