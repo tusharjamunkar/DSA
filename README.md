@@ -12,6 +12,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Arrays & Hashing | Easy | [Python](leetcode/0217_contains_duplicate.py) | $O(n)$ | $O(n)$ | 2026-09-09 |
 | 0242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Arrays & Hashing | Easy | [Python](leetcode/0242_valid_anagram.py) | $O(n)$ | $O(1)$ | 2026-09-10 |
 | 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Arrays & Hashing | Medium | [Python](leetcode/0049_group_anagrams.py) | $O(N \cdot K)$ | $O(N \cdot K)$ | 2026-09-11 |
+| 0347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Arrays & Hashing | Medium | [Python](leetcode/0347_top_k_frequent_elements.py) | $O(n)$ | $O(n)$ | 2026-09-12 |
+| 0238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Arrays & Hashing | Medium | [Python](leetcode/0238_product_of_array_except_self.py) | $O(n)$ | $O(1)$ | 2026-09-12 |
+
 
 ---
 

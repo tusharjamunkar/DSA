@@ -43,3 +43,21 @@ def test_suite_group_anagrams():
     canonical = sorted([sorted(g) for g in res])
     expected = sorted([["bat"], ["nat", "tan"], ["ate", "eat", "tea"]])
     assert canonical == expected
+
+
+def test_suite_top_k_frequent():
+    mod = importlib.import_module("leetcode.0347_top_k_frequent_elements")
+    sol = mod.Solution()
+    assert sorted(sol.topKFrequent([1, 1, 1, 2, 2, 3], 2)) == [1, 2]
+    assert sorted(sol.topKFrequentHeap([1, 1, 1, 2, 2, 3], 2)) == [1, 2]
+    assert sorted(sol.topKFrequentSort([1, 1, 1, 2, 2, 3], 2)) == [1, 2]
+    assert sol.topKFrequent([1], 1) == [1]
+
+
+def test_suite_product_except_self():
+    mod = importlib.import_module("leetcode.0238_product_of_array_except_self")
+    sol = mod.Solution()
+    assert sol.productExceptSelf([1, 2, 3, 4]) == [24, 12, 8, 6]
+    assert sol.productExceptSelf([-1, 1, 0, -3, 3]) == [0, 0, 9, 0, 0]
+    assert sol.productExceptSelfWithArrays([1, 2, 3, 4]) == [24, 12, 8, 6]
+
