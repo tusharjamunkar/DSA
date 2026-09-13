@@ -14,6 +14,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Arrays & Hashing | Medium | [Python](leetcode/0049_group_anagrams.py) | $O(N \cdot K)$ | $O(N \cdot K)$ | 2026-09-11 |
 | 0347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Arrays & Hashing | Medium | [Python](leetcode/0347_top_k_frequent_elements.py) | $O(n)$ | $O(n)$ | 2026-09-12 |
 | 0238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Arrays & Hashing | Medium | [Python](leetcode/0238_product_of_array_except_self.py) | $O(n)$ | $O(1)$ | 2026-09-12 |
+| 0036 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Arrays & Hashing | Medium | [Python](leetcode/0036_valid_sudoku.py) | $O(1)$ | $O(1)$ | 2026-09-13 |
+| 0128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Arrays & Hashing | Medium | [Python](leetcode/0128_longest_consecutive_sequence.py) | $O(n)$ | $O(n)$ | 2026-09-13 |
+
 
 
 ---

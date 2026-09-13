@@ -61,3 +61,31 @@ def test_suite_product_except_self():
     assert sol.productExceptSelf([-1, 1, 0, -3, 3]) == [0, 0, 9, 0, 0]
     assert sol.productExceptSelfWithArrays([1, 2, 3, 4]) == [24, 12, 8, 6]
 
+
+def test_suite_valid_sudoku():
+    mod = importlib.import_module("leetcode.0036_valid_sudoku")
+    sol = mod.Solution()
+    board = [
+        ["5", "3", ".", ".", "7", ".", ".", ".", "."],
+        ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+        [".", "9", "8", ".", ".", ".", ".", "6", "."],
+        ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+        ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
+        ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+        [".", "6", ".", ".", ".", ".", "2", "8", "."],
+        [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+        [".", ".", ".", ".", "8", ".", ".", "7", "9"],
+    ]
+    assert sol.isValidSudoku(board) is True
+    assert sol.isValidSudokuBitmask(board) is True
+
+
+def test_suite_longest_consecutive():
+    mod = importlib.import_module("leetcode.0128_longest_consecutive_sequence")
+    sol = mod.Solution()
+    assert sol.longestConsecutive([100, 4, 200, 1, 3, 2]) == 4
+    assert sol.longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]) == 9
+    assert sol.longestConsecutive([]) == 0
+    assert sol.longestConsecutiveSort([100, 4, 200, 1, 3, 2]) == 4
+
+
