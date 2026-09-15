@@ -89,3 +89,26 @@ def test_suite_longest_consecutive():
     assert sol.longestConsecutiveSort([100, 4, 200, 1, 3, 2]) == 4
 
 
+def test_suite_valid_palindrome():
+    mod = importlib.import_module("leetcode.0125_valid_palindrome")
+    sol = mod.Solution()
+    assert sol.isPalindrome("A man, a plan, a canal: Panama") is True
+    assert sol.isPalindrome("race a car") is False
+    assert sol.isPalindrome(" ") is True
+    assert sol.isPalindrome("0P") is False
+    assert sol.isPalindromeFiltered("A man, a plan, a canal: Panama") is True
+    assert sol.isPalindromeFiltered("race a car") is False
+
+
+def test_suite_two_sum_ii():
+    mod = importlib.import_module("leetcode.0167_two_sum_ii_input_array_is_sorted")
+    sol = mod.Solution()
+    assert sol.twoSum([2, 7, 11, 15], 9) == [1, 2]
+    assert sol.twoSum([2, 3, 4], 6) == [1, 3]
+    assert sol.twoSum([-1, 0], -1) == [1, 2]
+    assert sol.twoSumBinarySearch([2, 7, 11, 15], 9) == [1, 2]
+    assert sol.twoSumBinarySearch([2, 3, 4], 6) == [1, 3]
+    assert sol.twoSumHashMap([2, 7, 11, 15], 9) == [1, 2]
+
+
+
