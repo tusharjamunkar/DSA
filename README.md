@@ -18,6 +18,8 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Arrays & Hashing | Medium | [Python](leetcode/0128_longest_consecutive_sequence.py) | $O(n)$ | $O(n)$ | 2026-09-13 |
 | 0125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Two Pointers | Easy | [Python](leetcode/0125_valid_palindrome.py) | $O(n)$ | $O(1)$ | 2026-09-15 |
 | 0167 | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Two Pointers | Medium | [Python](leetcode/0167_two_sum_ii_input_array_is_sorted.py) | $O(n)$ | $O(1)$ | 2026-09-15 |
+| 0011 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Two Pointers | Medium | [Python](leetcode/0011_container_with_most_water.py) | $O(n)$ | $O(1)$ | 2026-09-17 |
+| 0015 | [3Sum](https://leetcode.com/problems/3sum/) | Two Pointers | Medium | [Python](leetcode/0015_three_sum.py) | $O(n^2)$ | $O(1)$ | 2026-09-17 |
 
 
 

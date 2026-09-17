@@ -112,3 +112,36 @@ def test_suite_two_sum_ii():
 
 
 
+
+def test_suite_three_sum():
+    mod = importlib.import_module("leetcode.0015_three_sum")
+    sol = mod.Solution()
+    
+    def normalize(result):
+        return {tuple(sorted(trip)) for trip in result}
+
+    nums1 = [-1, 0, 1, 2, -1, -4]
+    expected1 = {(-1, -1, 2), (-1, 0, 1)}
+    assert normalize(sol.threeSum(nums1.copy())) == expected1
+    assert normalize(sol.threeSumHashSet(nums1)) == expected1
+
+    assert sol.threeSum([0, 1, 1]) == []
+    assert normalize(sol.threeSum([0, 0, 0])) == {(0, 0, 0)}
+
+
+def test_suite_container_with_most_water():
+    mod = importlib.import_module("leetcode.0011_container_with_most_water")
+    sol = mod.Solution()
+
+    h1 = [1, 8, 6, 2, 5, 4, 8, 3, 7]
+    assert sol.maxArea(h1) == 49
+    assert sol.maxAreaOptimized(h1) == 49
+    assert sol.maxAreaBruteForce(h1) == 49
+
+    h2 = [1, 1]
+    assert sol.maxArea(h2) == 1
+    assert sol.maxAreaOptimized(h2) == 1
+
+    h3 = [4, 3, 2, 1, 4]
+    assert sol.maxArea(h3) == 16
+    assert sol.maxAreaOptimized(h3) == 16
