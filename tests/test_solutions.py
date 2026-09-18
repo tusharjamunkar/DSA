@@ -145,3 +145,21 @@ def test_suite_container_with_most_water():
     h3 = [4, 3, 2, 1, 4]
     assert sol.maxArea(h3) == 16
     assert sol.maxAreaOptimized(h3) == 16
+
+def test_suite_trapping_rain_water():
+    mod = importlib.import_module("leetcode.0042_trapping_rain_water")
+    sol = mod.Solution()
+    assert sol.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]) == 6
+    assert sol.trapDP([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]) == 6
+    assert sol.trapMonotonicStack([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]) == 6
+    assert sol.trap([4, 2, 0, 3, 2, 5]) == 9
+    assert sol.trap([3, 3, 3]) == 0
+
+
+def test_suite_best_time_to_buy_and_sell_stock():
+    mod = importlib.import_module("leetcode.0121_best_time_to_buy_and_sell_stock")
+    sol = mod.Solution()
+    assert sol.maxProfit([7, 1, 5, 3, 6, 4]) == 5
+    assert sol.maxProfitRunningMin([7, 1, 5, 3, 6, 4]) == 5
+    assert sol.maxProfit([7, 6, 4, 3, 1]) == 0
+    assert sol.maxProfit([1, 2, 3, 4, 5]) == 4

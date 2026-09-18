@@ -20,6 +20,8 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0167 | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Two Pointers | Medium | [Python](leetcode/0167_two_sum_ii_input_array_is_sorted.py) | $O(n)$ | $O(1)$ | 2026-09-15 |
 | 0011 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Two Pointers | Medium | [Python](leetcode/0011_container_with_most_water.py) | $O(n)$ | $O(1)$ | 2026-09-17 |
 | 0015 | [3Sum](https://leetcode.com/problems/3sum/) | Two Pointers | Medium | [Python](leetcode/0015_three_sum.py) | $O(n^2)$ | $O(1)$ | 2026-09-17 |
+| 0042 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Two Pointers | Hard | [Python](leetcode/0042_trapping_rain_water.py) | $O(n)$ | $O(1)$ | 2026-09-18 |
+| 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Sliding Window | Easy | [Python](leetcode/0121_best_time_to_buy_and_sell_stock.py) | $O(n)$ | $O(1)$ | 2026-09-18 |
 
 
 
