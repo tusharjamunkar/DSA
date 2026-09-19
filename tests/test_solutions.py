@@ -150,6 +150,7 @@ def test_suite_trapping_rain_water():
     mod = importlib.import_module("leetcode.0042_trapping_rain_water")
     sol = mod.Solution()
     assert sol.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]) == 6
+
     assert sol.trapDP([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]) == 6
     assert sol.trapMonotonicStack([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]) == 6
     assert sol.trap([4, 2, 0, 3, 2, 5]) == 9
@@ -163,3 +164,24 @@ def test_suite_best_time_to_buy_and_sell_stock():
     assert sol.maxProfitRunningMin([7, 1, 5, 3, 6, 4]) == 5
     assert sol.maxProfit([7, 6, 4, 3, 1]) == 0
     assert sol.maxProfit([1, 2, 3, 4, 5]) == 4
+
+
+def test_suite_longest_substring_without_repeating_characters():
+    mod = importlib.import_module("leetcode.0003_longest_substring_without_repeating_characters")
+    sol = mod.Solution()
+    assert sol.lengthOfLongestSubstring("abcabcbb") == 3
+    assert sol.lengthOfLongestSubstringSet("abcabcbb") == 3
+    assert sol.lengthOfLongestSubstring("bbbbb") == 1
+    assert sol.lengthOfLongestSubstring("pwwkew") == 3
+    assert sol.lengthOfLongestSubstring("") == 0
+    assert sol.lengthOfLongestSubstring("tmmzuxt") == 5
+
+
+def test_suite_longest_repeating_character_replacement():
+    mod = importlib.import_module("leetcode.0424_longest_repeating_character_replacement")
+    sol = mod.Solution()
+    assert sol.characterReplacement("ABAB", 2) == 4
+    assert sol.characterReplacement("AABABBA", 1) == 4
+    assert sol.characterReplacement("ABBB", 0) == 3
+    assert sol.characterReplacement("A", 0) == 1
+    assert sol.characterReplacement("ABCDE", 5) == 5

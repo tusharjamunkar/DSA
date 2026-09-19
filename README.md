@@ -22,6 +22,8 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0015 | [3Sum](https://leetcode.com/problems/3sum/) | Two Pointers | Medium | [Python](leetcode/0015_three_sum.py) | $O(n^2)$ | $O(1)$ | 2026-09-17 |
 | 0042 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Two Pointers | Hard | [Python](leetcode/0042_trapping_rain_water.py) | $O(n)$ | $O(1)$ | 2026-09-18 |
 | 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Sliding Window | Easy | [Python](leetcode/0121_best_time_to_buy_and_sell_stock.py) | $O(n)$ | $O(1)$ | 2026-09-18 |
+| 0003 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Sliding Window | Medium | [Python](leetcode/0003_longest_substring_without_repeating_characters.py) | $O(n)$ | $O(min(m, n))$ | 2026-09-19 |
+| 0424 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Sliding Window | Medium | [Python](leetcode/0424_longest_repeating_character_replacement.py) | $O(n)$ | $O(1)$ | 2026-09-19 |
 
 
 
