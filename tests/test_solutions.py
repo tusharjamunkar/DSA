@@ -185,3 +185,31 @@ def test_suite_longest_repeating_character_replacement():
     assert sol.characterReplacement("ABBB", 0) == 3
     assert sol.characterReplacement("A", 0) == 1
     assert sol.characterReplacement("ABCDE", 5) == 5
+
+
+def test_suite_permutation_in_string():
+    mod = importlib.import_module("leetcode.0567_permutation_in_string")
+    sol = mod.Solution()
+    assert sol.checkInclusion("ab", "eidbaooo") is True
+    assert sol.checkInclusionDirect("ab", "eidbaooo") is True
+    assert sol.checkInclusion("ab", "eidboaoo") is False
+    assert sol.checkInclusionDirect("ab", "eidboaoo") is False
+    assert sol.checkInclusion("aab", "baab") is True
+
+
+def test_suite_minimum_window_substring():
+    mod = importlib.import_module("leetcode.0076_minimum_window_substring")
+    sol = mod.Solution()
+    assert sol.minWindow("ADOBECODEBANC", "ABC") == "BANC"
+    assert sol.minWindow("a", "a") == "a"
+    assert sol.minWindow("a", "aa") == ""
+    assert sol.minWindow("aAbBC", "ABC") == "AbBC"
+
+
+def test_suite_sliding_window_maximum():
+    mod = importlib.import_module("leetcode.0239_sliding_window_maximum")
+    sol = mod.Solution()
+    assert sol.maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3) == [3, 3, 5, 5, 6, 7]
+    assert sol.maxSlidingWindow([1], 1) == [1]
+    assert sol.maxSlidingWindow([5, 4, 3, 2, 1], 2) == [5, 4, 3, 2]
+

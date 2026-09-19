@@ -24,6 +24,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Sliding Window | Easy | [Python](leetcode/0121_best_time_to_buy_and_sell_stock.py) | $O(n)$ | $O(1)$ | 2026-09-18 |
 | 0003 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Sliding Window | Medium | [Python](leetcode/0003_longest_substring_without_repeating_characters.py) | $O(n)$ | $O(min(m, n))$ | 2026-09-19 |
 | 0424 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Sliding Window | Medium | [Python](leetcode/0424_longest_repeating_character_replacement.py) | $O(n)$ | $O(1)$ | 2026-09-19 |
+| 0567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Sliding Window | Medium | [Python](leetcode/0567_permutation_in_string.py) | $O(n)$ | $O(1)$ | 2026-09-19 |
+| 0076 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Sliding Window | Hard | [Python](leetcode/0076_minimum_window_substring.py) | $O(m + n)$ | $O(1)$ | 2026-09-19 |
+| 0239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Sliding Window | Hard | [Python](leetcode/0239_sliding_window_maximum.py) | $O(n)$ | $O(k)$ | 2026-09-19 |
 
 
 
