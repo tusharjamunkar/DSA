@@ -213,3 +213,34 @@ def test_suite_sliding_window_maximum():
     assert sol.maxSlidingWindow([1], 1) == [1]
     assert sol.maxSlidingWindow([5, 4, 3, 2, 1], 2) == [5, 4, 3, 2]
 
+
+def test_suite_valid_parentheses():
+    mod = importlib.import_module("leetcode.0020_valid_parentheses")
+    sol = mod.Solution()
+    assert sol.isValid("()") is True
+    assert sol.isValid("()[]{}") is True
+    assert sol.isValid("(]") is False
+    assert sol.isValid("([])") is True
+    assert sol.isValid("([)]") is False
+
+
+def test_suite_min_stack():
+    mod = importlib.import_module("leetcode.0155_min_stack")
+    ms = mod.MinStack()
+    ms.push(-2)
+    ms.push(0)
+    ms.push(-3)
+    assert ms.getMin() == -3
+    ms.pop()
+    assert ms.top() == 0
+    assert ms.getMin() == -2
+
+
+def test_suite_evaluate_reverse_polish_notation():
+    mod = importlib.import_module("leetcode.0150_evaluate_reverse_polish_notation")
+    sol = mod.Solution()
+    assert sol.evalRPN(["2", "1", "+", "3", "*"]) == 9
+    assert sol.evalRPN(["4", "13", "5", "/", "+"]) == 6
+    assert sol.evalRPN(["-7", "3", "/"]) == -2
+
+

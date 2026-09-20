@@ -27,6 +27,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Sliding Window | Medium | [Python](leetcode/0567_permutation_in_string.py) | $O(n)$ | $O(1)$ | 2026-09-19 |
 | 0076 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Sliding Window | Hard | [Python](leetcode/0076_minimum_window_substring.py) | $O(m + n)$ | $O(1)$ | 2026-09-19 |
 | 0239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Sliding Window | Hard | [Python](leetcode/0239_sliding_window_maximum.py) | $O(n)$ | $O(k)$ | 2026-09-19 |
+| 0020 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack | Easy | [Python](leetcode/0020_valid_parentheses.py) | $O(n)$ | $O(n)$ | 2026-09-20 |
+| 0155 | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack | Medium | [Python](leetcode/0155_min_stack.py) | $O(1)$ | $O(n)$ | 2026-09-20 |
+| 0150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Stack | Medium | [Python](leetcode/0150_evaluate_reverse_polish_notation.py) | $O(n)$ | $O(n)$ | 2026-09-20 |
 
 
 
