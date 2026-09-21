@@ -30,6 +30,8 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0020 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack | Easy | [Python](leetcode/0020_valid_parentheses.py) | $O(n)$ | $O(n)$ | 2026-09-20 |
 | 0155 | [Min Stack](https://leetcode.com/problems/min-stack/) | Stack | Medium | [Python](leetcode/0155_min_stack.py) | $O(1)$ | $O(n)$ | 2026-09-20 |
 | 0150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Stack | Medium | [Python](leetcode/0150_evaluate_reverse_polish_notation.py) | $O(n)$ | $O(n)$ | 2026-09-20 |
+| 0022 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Stack | Medium | [Python](leetcode/0022_generate_parentheses.py) | $O(\frac{4^n}{\sqrt{n}})$ | $O(n)$ | 2026-09-21 |
+| 0739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Stack | Medium | [Python](leetcode/0739_daily_temperatures.py) | $O(n)$ | $O(n)$ | 2026-09-21 |
 
 
 

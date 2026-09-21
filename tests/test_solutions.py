@@ -244,3 +244,20 @@ def test_suite_evaluate_reverse_polish_notation():
     assert sol.evalRPN(["-7", "3", "/"]) == -2
 
 
+def test_suite_generate_parentheses():
+    mod = importlib.import_module("leetcode.0022_generate_parentheses")
+    sol = mod.Solution()
+    assert sol.generateParenthesis(1) == ["()"]
+    assert sorted(sol.generateParenthesis(2)) == sorted(["(())", "()()"])
+    assert len(sol.generateParenthesis(3)) == 5
+
+
+def test_suite_daily_temperatures():
+    mod = importlib.import_module("leetcode.0739_daily_temperatures")
+    sol = mod.Solution()
+    assert sol.dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]) == [1, 1, 4, 2, 1, 1, 0, 0]
+    assert sol.dailyTemperatures([30, 40, 50, 60]) == [1, 1, 1, 0]
+    assert sol.dailyTemperatures([30, 60, 90]) == [1, 1, 0]
+
+
+
