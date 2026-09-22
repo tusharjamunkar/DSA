@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA & LeetCode Tracker | Tushar Jamunkar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-hover: #79c0ff;
+      --easy: #3fb950;
+      --easy-bg: rgba(63, 185, 80, 0.15);
+      --medium: #d29922;
+      --medium-bg: rgba(210, 153, 34, 0.15);
+      --hard: #f85149;
+      --hard-bg: rgba(248, 81, 73, 0.15);
+      --tag-bg: #21262d;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #58a6ff 0%, #bc8cff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 0.3rem;
+    }
+    .github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      background-color: var(--card-bg);
+      color: var(--text-main);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .github-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .stat-val {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'Fira Code', monospace;
+    }
+    .stat-lbl {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.2rem;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 250px;
+    }
+    .search-input {
+      width: 100%;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--accent);
+    }
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .pill {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+    }
+    .pill:hover, .pill.active {
+      background-color: var(--tag-bg);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .table-container {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th {
+      background-color: #1c2128;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    .badge.easy {
+      background-color: var(--easy-bg);
+      color: var(--easy);
+    }
+    .badge.medium {
+      background-color: var(--medium-bg);
+      color: var(--medium);
+    }
+    .badge.hard {
+      background-color: var(--hard-bg);
+      color: var(--hard);
+    }
+    .code-badge {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: #79c0ff;
+      background-color: rgba(56, 139, 253, 0.1);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+    a.prob-link {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a.prob-link:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    a.code-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    a.code-link:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <div>
+          <h1>DSA & LeetCode Solutions</h1>
+          <p class="subtitle">Curated, optimal algorithms & data structure implementations by <strong>Tushar Jamunkar</strong></p>
+        </div>
+        <a class="github-link" href="https://github.com/tusharjamunkar/DSA" target="_blank" rel="noopener">
+          <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-val" style="color: var(--accent);">26</div>
+        <div class="stat-lbl">Problems Solved</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" style="color: var(--easy);">5</div>
+        <div class="stat-lbl">Easy</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" style="color: var(--medium);">16</div>
+        <div class="stat-lbl">Medium</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" style="color: var(--hard);">5</div>
+        <div class="stat-lbl">Hard</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" style="color: #bc8cff;">4 / 4</div>
+        <div class="stat-lbl">Modules Completed</div>
+      </div>
+    </div>
+
+    <div class="filters">
+      <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search problem by name, #, or keyword...">
+      </div>
+      <div class="category-pills">
+        <div class="pill active" data-cat="all">All Topics</div>
+        <div class="pill" data-cat="Arrays & Hashing">Arrays & Hashing (8)</div>
+        <div class="pill" data-cat="Two Pointers">Two Pointers (5)</div>
+        <div class="pill" data-cat="Sliding Window">Sliding Window (6)</div>
+        <div class="pill" data-cat="Stack">Stack (7)</div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table id="problemsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Topic</th>
+            <th>Difficulty</th>
+            <th>Time</th>
+            <th>Space</th>
+            <th>Solution</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p>Data Structures & Algorithms Repository &copy; 2026 Tushar Jamunkar. Continuous automated testing with pytest.</p>
+    </footer>
+  </div>
+
+  <script>
+    const problems = [
+      { num: "0001", name: "Two Sum", topic: "Arrays & Hashing", diff: "Easy", time: "O(n)", space: "O(n)", file: "0001_two_sum.py", lc: "two-sum" },
+      { num: "0217", name: "Contains Duplicate", topic: "Arrays & Hashing", diff: "Easy", time: "O(n)", space: "O(n)", file: "0217_contains_duplicate.py", lc: "contains-duplicate" },
+      { num: "0242", name: "Valid Anagram", topic: "Arrays & Hashing", diff: "Easy", time: "O(n)", space: "O(1)", file: "0242_valid_anagram.py", lc: "valid-anagram" },
+      { num: "0049", name: "Group Anagrams", topic: "Arrays & Hashing", diff: "Medium", time: "O(N · K)", space: "O(N · K)", file: "0049_group_anagrams.py", lc: "group-anagrams" },
+      { num: "0347", name: "Top K Frequent Elements", topic: "Arrays & Hashing", diff: "Medium", time: "O(n)", space: "O(n)", file: "0347_top_k_frequent_elements.py", lc: "top-k-frequent-elements" },
+      { num: "0238", name: "Product of Array Except Self", topic: "Arrays & Hashing", diff: "Medium", time: "O(n)", space: "O(1)", file: "0238_product_of_array_except_self.py", lc: "product-of-array-except-self" },
+      { num: "0036", name: "Valid Sudoku", topic: "Arrays & Hashing", diff: "Medium", time: "O(1)", space: "O(1)", file: "0036_valid_sudoku.py", lc: "valid-sudoku" },
+      { num: "0128", name: "Longest Consecutive Sequence", topic: "Arrays & Hashing", diff: "Medium", time: "O(n)", space: "O(n)", file: "0128_longest_consecutive_sequence.py", lc: "longest-consecutive-sequence" },
+      { num: "0125", name: "Valid Palindrome", topic: "Two Pointers", diff: "Easy", time: "O(n)", space: "O(1)", file: "0125_valid_palindrome.py", lc: "valid-palindrome" },
+      { num: "0167", name: "Two Sum II - Input Array Is Sorted", topic: "Two Pointers", diff: "Medium", time: "O(n)", space: "O(1)", file: "0167_two_sum_ii_input_array_is_sorted.py", lc: "two-sum-ii-input-array-is-sorted" },
+      { num: "0011", name: "Container With Most Water", topic: "Two Pointers", diff: "Medium", time: "O(n)", space: "O(1)", file: "0011_container_with_most_water.py", lc: "container-with-most-water" },
+      { num: "0015", name: "3Sum", topic: "Two Pointers", diff: "Medium", time: "O(n²)", space: "O(1)", file: "0015_three_sum.py", lc: "3sum" },
+      { num: "0042", name: "Trapping Rain Water", topic: "Two Pointers", diff: "Hard", time: "O(n)", space: "O(1)", file: "0042_trapping_rain_water.py", lc: "trapping-rain-water" },
+      { num: "0121", name: "Best Time to Buy and Sell Stock", topic: "Sliding Window", diff: "Easy", time: "O(n)", space: "O(1)", file: "0121_best_time_to_buy_and_sell_stock.py", lc: "best-time-to-buy-and-sell-stock" },
+      { num: "0003", name: "Longest Substring Without Repeating Characters", topic: "Sliding Window", diff: "Medium", time: "O(n)", space: "O(min(m, n))", file: "0003_longest_substring_without_repeating_characters.py", lc: "longest-substring-without-repeating-characters" },
+      { num: "0424", name: "Longest Repeating Character Replacement", topic: "Sliding Window", diff: "Medium", time: "O(n)", space: "O(1)", file: "0424_longest_repeating_character_replacement.py", lc: "longest-repeating-character-replacement" },
+      { num: "0567", name: "Permutation in String", topic: "Sliding Window", diff: "Medium", time: "O(n)", space: "O(1)", file: "0567_permutation_in_string.py", lc: "permutation-in-string" },
+      { num: "0076", name: "Minimum Window Substring", topic: "Sliding Window", diff: "Hard", time: "O(m + n)", space: "O(1)", file: "0076_minimum_window_substring.py", lc: "minimum-window-substring" },
+      { num: "0239", name: "Sliding Window Maximum", topic: "Sliding Window", diff: "Hard", time: "O(n)", space: "O(k)", file: "0239_sliding_window_maximum.py", lc: "sliding-window-maximum" },
+      { num: "0020", name: "Valid Parentheses", topic: "Stack", diff: "Easy", time: "O(n)", space: "O(n)", file: "0020_valid_parentheses.py", lc: "valid-parentheses" },
+      { num: "0155", name: "Min Stack", topic: "Stack", diff: "Medium", time: "O(1)", space: "O(n)", file: "0155_min_stack.py", lc: "min-stack" },
+      { num: "0150", name: "Evaluate Reverse Polish Notation", topic: "Stack", diff: "Medium", time: "O(n)", space: "O(n)", file: "0150_evaluate_reverse_polish_notation.py", lc: "evaluate-reverse-polish-notation" },
+      { num: "0022", name: "Generate Parentheses", topic: "Stack", diff: "Medium", time: "O(4ⁿ / √n)", space: "O(n)", file: "0022_generate_parentheses.py", lc: "generate-parentheses" },
+      { num: "0739", name: "Daily Temperatures", topic: "Stack", diff: "Medium", time: "O(n)", space: "O(n)", file: "0739_daily_temperatures.py", lc: "daily-temperatures" },
+      { num: "0853", name: "Car Fleet", topic: "Stack", diff: "Medium", time: "O(n log n)", space: "O(n)", file: "0853_car_fleet.py", lc: "car-fleet" },
+      { num: "0084", name: "Largest Rectangle in Histogram", topic: "Stack", diff: "Hard", time: "O(n)", space: "O(n)", file: "0084_largest_rectangle_in_histogram.py", lc: "largest-rectangle-in-histogram" }
+    ];
+
+    let activeCategory = 'all';
+    let searchQuery = '';
+
+    function renderTable() {
+      const tbody = document.getElementById('tableBody');
+      const filtered = problems.filter(p => {
+        const matchesCat = activeCategory === 'all' || p.topic === activeCategory;
+        const matchesSearch = !searchQuery || 
+          p.name.toLowerCase().includes(searchQuery) || 
+          p.num.includes(searchQuery) ||
+          p.topic.toLowerCase().includes(searchQuery) ||
+          p.diff.toLowerCase().includes(searchQuery);
+        return matchesCat && matchesSearch;
+      });
+
+      tbody.innerHTML = filtered.map(p => `
+        <tr>
+          <td style="font-family: 'Fira Code', monospace; color: var(--text-muted);">${p.num}</td>
+          <td>
+            <a class="prob-link" href="https://leetcode.com/problems/${p.lc}/" target="_blank" rel="noopener">${p.name}</a>
+          </td>
+          <td style="color: var(--text-muted);">${p.topic}</td>
+          <td><span class="badge ${p.diff.toLowerCase()}">${p.diff}</span></td>
+          <td><span class="code-badge">${p.time}</span></td>
+          <td><span class="code-badge">${p.space}</span></td>
+          <td>
+            <a class="code-link" href="https://github.com/tusharjamunkar/DSA/blob/main/leetcode/${p.file}" target="_blank" rel="noopener">
+              <svg height="14" width="14" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M4.72 3.22a.75.75 0 0 1 1.06 1.06L2.06 8l3.72 3.72a.75.75 0 1 1-1.06 1.06L.47 8.53a.75.75 0 0 1 0-1.06l4.25-4.25zm6.56 0a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L13.94 8l-3.72-3.72a.75.75 0 0 1 0-1.06z"></path>
+              </svg>
+              Python
+            </a>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    document.querySelectorAll('.pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        activeCategory = pill.dataset.cat;
+        renderTable();
+      });
+    });
+
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      renderTable();
+    });
+
+    renderTable();
+  </script>
+</body>
+</html>
