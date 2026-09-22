@@ -260,4 +260,21 @@ def test_suite_daily_temperatures():
     assert sol.dailyTemperatures([30, 60, 90]) == [1, 1, 0]
 
 
+def test_suite_car_fleet():
+    mod = importlib.import_module("leetcode.0853_car_fleet")
+    sol = mod.Solution()
+    assert sol.carFleet(12, [10, 8, 0, 5, 3], [2, 4, 1, 1, 3]) == 3
+    assert sol.carFleet(10, [3], [3]) == 1
+    assert sol.carFleet(100, [0, 2, 4], [4, 2, 1]) == 1
+
+
+def test_suite_largest_rectangle_in_histogram():
+    mod = importlib.import_module("leetcode.0084_largest_rectangle_in_histogram")
+    sol = mod.Solution()
+    assert sol.largestRectangleArea([2, 1, 5, 6, 2, 3]) == 10
+    assert sol.largestRectangleArea([2, 4]) == 4
+    assert sol.largestRectangleArea([1, 2, 3, 4, 5]) == 9
+
+
+
 

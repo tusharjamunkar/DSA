@@ -32,6 +32,8 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Stack | Medium | [Python](leetcode/0150_evaluate_reverse_polish_notation.py) | $O(n)$ | $O(n)$ | 2026-09-20 |
 | 0022 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Stack | Medium | [Python](leetcode/0022_generate_parentheses.py) | $O(\frac{4^n}{\sqrt{n}})$ | $O(n)$ | 2026-09-21 |
 | 0739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Stack | Medium | [Python](leetcode/0739_daily_temperatures.py) | $O(n)$ | $O(n)$ | 2026-09-21 |
+| 0853 | [Car Fleet](https://leetcode.com/problems/car-fleet/) | Stack | Medium | [Python](leetcode/0853_car_fleet.py) | $O(n \log n)$ | $O(n)$ | 2026-09-22 |
+| 0084 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Stack | Hard | [Python](leetcode/0084_largest_rectangle_in_histogram.py) | $O(n)$ | $O(n)$ | 2026-09-22 |
 
 
 
