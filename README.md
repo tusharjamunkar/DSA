@@ -34,6 +34,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Stack | Medium | [Python](leetcode/0739_daily_temperatures.py) | $O(n)$ | $O(n)$ | 2026-09-21 |
 | 0853 | [Car Fleet](https://leetcode.com/problems/car-fleet/) | Stack | Medium | [Python](leetcode/0853_car_fleet.py) | $O(n \log n)$ | $O(n)$ | 2026-09-22 |
 | 0084 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Stack | Hard | [Python](leetcode/0084_largest_rectangle_in_histogram.py) | $O(n)$ | $O(n)$ | 2026-09-22 |
+| 0704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Binary Search | Easy | [Python](leetcode/0704_binary_search.py) | $O(\log n)$ | $O(1)$ | 2026-09-23 |
+| 0074 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Binary Search | Medium | [Python](leetcode/0074_search_a_2d_matrix.py) | $O(\log(m \cdot n))$ | $O(1)$ | 2026-09-23 |
+| 0875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Binary Search | Medium | [Python](leetcode/0875_koko_eating_bananas.py) | $O(n \cdot \log(\max(P)))$ | $O(1)$ | 2026-09-23 |
 
 
 

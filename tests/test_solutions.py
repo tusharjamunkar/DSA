@@ -276,5 +276,31 @@ def test_suite_largest_rectangle_in_histogram():
     assert sol.largestRectangleArea([1, 2, 3, 4, 5]) == 9
 
 
+def test_suite_binary_search():
+    mod = importlib.import_module("leetcode.0704_binary_search")
+    sol = mod.Solution()
+    assert sol.search([-1, 0, 3, 5, 9, 12], 9) == 4
+    assert sol.search([-1, 0, 3, 5, 9, 12], 2) == -1
+    assert sol.search([5], 5) == 0
+
+
+def test_suite_search_2d_matrix():
+    mod = importlib.import_module("leetcode.0074_search_a_2d_matrix")
+    sol = mod.Solution()
+    m = [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]]
+    assert sol.searchMatrix(m, 3) is True
+    assert sol.searchMatrix(m, 13) is False
+    assert sol.searchMatrixTwoPass(m, 3) is True
+
+
+def test_suite_koko_eating_bananas():
+    mod = importlib.import_module("leetcode.0875_koko_eating_bananas")
+    sol = mod.Solution()
+    assert sol.minEatingSpeed([3, 6, 7, 11], 8) == 4
+    assert sol.minEatingSpeed([30, 11, 23, 4, 20], 5) == 30
+    assert sol.minEatingSpeed([30, 11, 23, 4, 20], 6) == 23
+
+
+
 
 
