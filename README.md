@@ -37,6 +37,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Binary Search | Easy | [Python](leetcode/0704_binary_search.py) | $O(\log n)$ | $O(1)$ | 2026-09-23 |
 | 0074 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Binary Search | Medium | [Python](leetcode/0074_search_a_2d_matrix.py) | $O(\log(m \cdot n))$ | $O(1)$ | 2026-09-23 |
 | 0875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Binary Search | Medium | [Python](leetcode/0875_koko_eating_bananas.py) | $O(n \cdot \log(\max(P)))$ | $O(1)$ | 2026-09-23 |
+| 0153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Binary Search | Medium | [Python](leetcode/0153_find_minimum_in_rotated_sorted_array.py) | $O(\log n)$ | $O(1)$ | 2026-09-24 |
+| 0033 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Binary Search | Medium | [Python](leetcode/0033_search_in_rotated_sorted_array.py) | $O(\log n)$ | $O(1)$ | 2026-09-24 |
+| 0981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Binary Search | Medium | [Python](leetcode/0981_time_based_key_value_store.py) | $O(1)$ set / $O(\log m)$ get | $O(n)$ | 2026-09-24 |
 
 
 

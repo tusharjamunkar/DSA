@@ -299,8 +299,33 @@ def test_suite_koko_eating_bananas():
     assert sol.minEatingSpeed([3, 6, 7, 11], 8) == 4
     assert sol.minEatingSpeed([30, 11, 23, 4, 20], 5) == 30
     assert sol.minEatingSpeed([30, 11, 23, 4, 20], 6) == 23
+def test_suite_find_min_rotated():
+    mod = importlib.import_module("leetcode.0153_find_minimum_in_rotated_sorted_array")
+    sol = mod.Solution()
+    assert sol.findMin([3, 4, 5, 1, 2]) == 1
+    assert sol.findMin([4, 5, 6, 7, 0, 1, 2]) == 0
+    assert sol.findMin([11, 13, 15, 17]) == 11
+    assert sol.findMin([2, 1]) == 1
 
 
+def test_suite_search_rotated_array():
+    mod = importlib.import_module("leetcode.0033_search_in_rotated_sorted_array")
+    sol = mod.Solution()
+    assert sol.search([4, 5, 6, 7, 0, 1, 2], 0) == 4
+    assert sol.search([4, 5, 6, 7, 0, 1, 2], 3) == -1
+    assert sol.search([1], 0) == -1
+    assert sol.search([1, 3], 3) == 1
 
+
+def test_suite_time_based_key_value_store():
+    mod = importlib.import_module("leetcode.0981_time_based_key_value_store")
+    tm = mod.TimeMap()
+    tm.set("foo", "bar", 1)
+    assert tm.get("foo", 1) == "bar"
+    assert tm.get("foo", 3) == "bar"
+    tm.set("foo", "bar2", 4)
+    assert tm.get("foo", 4) == "bar2"
+    assert tm.get("foo", 5) == "bar2"
+    assert tm.get("foo", 0) == ""
 
 
