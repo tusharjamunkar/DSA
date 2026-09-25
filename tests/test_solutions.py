@@ -329,3 +329,40 @@ def test_suite_time_based_key_value_store():
     assert tm.get("foo", 0) == ""
 
 
+def test_suite_median_two_sorted_arrays():
+    mod = importlib.import_module("leetcode.0004_median_of_two_sorted_arrays")
+    sol = mod.Solution()
+    assert sol.findMedianSortedArrays([1, 3], [2]) == 2.0
+    assert sol.findMedianSortedArrays([1, 2], [3, 4]) == 2.5
+    assert sol.findMedianSortedArrays([], [1]) == 1.0
+    assert sol.findMedianSortedArraysMerge([1, 2], [3, 4]) == 2.5
+
+
+def test_suite_reverse_linked_list():
+    mod = importlib.import_module("leetcode.0206_reverse_linked_list")
+    sol = mod.Solution()
+    ln = mod.ListNode
+    head = ln.from_list([1, 2, 3, 4, 5])
+    rev = sol.reverseList(head)
+    assert rev is not None and rev.to_list() == [5, 4, 3, 2, 1]
+    head_rec = ln.from_list([1, 2])
+    rev_rec = sol.reverseListRecursive(head_rec)
+    assert rev_rec is not None and rev_rec.to_list() == [2, 1]
+    assert sol.reverseList(None) is None
+
+
+def test_suite_merge_two_sorted_lists():
+    mod = importlib.import_module("leetcode.0021_merge_two_sorted_lists")
+    sol = mod.Solution()
+    ln = mod.ListNode
+    l1 = ln.from_list([1, 2, 4])
+    l2 = ln.from_list([1, 3, 4])
+    merged = sol.mergeTwoLists(l1, l2)
+    assert merged is not None and merged.to_list() == [1, 1, 2, 3, 4, 4]
+    l1_r = ln.from_list([])
+    l2_r = ln.from_list([0])
+    merged_r = sol.mergeTwoListsRecursive(l1_r, l2_r)
+    assert merged_r is not None and merged_r.to_list() == [0]
+    assert sol.mergeTwoLists(None, None) is None
+
+

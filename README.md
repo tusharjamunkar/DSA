@@ -40,6 +40,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Binary Search | Medium | [Python](leetcode/0153_find_minimum_in_rotated_sorted_array.py) | $O(\log n)$ | $O(1)$ | 2026-09-24 |
 | 0033 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Binary Search | Medium | [Python](leetcode/0033_search_in_rotated_sorted_array.py) | $O(\log n)$ | $O(1)$ | 2026-09-24 |
 | 0981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Binary Search | Medium | [Python](leetcode/0981_time_based_key_value_store.py) | $O(1)$ set / $O(\log m)$ get | $O(n)$ | 2026-09-24 |
+| 0004 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Binary Search | Hard | [Python](leetcode/0004_median_of_two_sorted_arrays.py) | $O(\log(\min(m, n)))$ | $O(1)$ | 2026-09-25 |
+| 0206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List | Easy | [Python](leetcode/0206_reverse_linked_list.py) | $O(n)$ | $O(1)$ | 2026-09-25 |
+| 0021 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List | Easy | [Python](leetcode/0021_merge_two_sorted_lists.py) | $O(n + m)$ | $O(1)$ | 2026-09-25 |
 
 
 
