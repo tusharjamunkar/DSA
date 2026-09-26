@@ -43,6 +43,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0004 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Binary Search | Hard | [Python](leetcode/0004_median_of_two_sorted_arrays.py) | $O(\log(\min(m, n)))$ | $O(1)$ | 2026-09-25 |
 | 0206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List | Easy | [Python](leetcode/0206_reverse_linked_list.py) | $O(n)$ | $O(1)$ | 2026-09-25 |
 | 0021 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Linked List | Easy | [Python](leetcode/0021_merge_two_sorted_lists.py) | $O(n + m)$ | $O(1)$ | 2026-09-25 |
+| 0143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Linked List | Medium | [Python](leetcode/0143_reorder_list.py) | $O(n)$ | $O(1)$ | 2026-09-26 |
+| 0019 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Linked List | Medium | [Python](leetcode/0019_remove_nth_node_from_end_of_list.py) | $O(n)$ | $O(1)$ | 2026-09-26 |
+| 0138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Linked List | Medium | [Python](leetcode/0138_copy_list_with_random_pointer.py) | $O(n)$ | $O(1)$ | 2026-09-26 |
 
 
 

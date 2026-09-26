@@ -366,3 +366,40 @@ def test_suite_merge_two_sorted_lists():
     assert sol.mergeTwoLists(None, None) is None
 
 
+def test_suite_reorder_list():
+    mod = importlib.import_module("leetcode.0143_reorder_list")
+    sol = mod.Solution()
+    ln = mod.ListNode
+    l1 = ln.from_list([1, 2, 3, 4])
+    sol.reorderList(l1)
+    assert l1 is not None and l1.to_list() == [1, 4, 2, 3]
+    l2 = ln.from_list([1, 2, 3, 4, 5])
+    sol.reorderList(l2)
+    assert l2 is not None and l2.to_list() == [1, 5, 2, 4, 3]
+
+
+def test_suite_remove_nth_from_end():
+    mod = importlib.import_module("leetcode.0019_remove_nth_node_from_end_of_list")
+    sol = mod.Solution()
+    ln = mod.ListNode
+    l1 = ln.from_list([1, 2, 3, 4, 5])
+    res1 = sol.removeNthFromEnd(l1, 2)
+    assert res1 is not None and res1.to_list() == [1, 2, 3, 5]
+    l2 = ln.from_list([1])
+    assert sol.removeNthFromEnd(l2, 1) is None
+
+
+def test_suite_copy_random_list():
+    mod = importlib.import_module("leetcode.0138_copy_list_with_random_pointer")
+    sol = mod.Solution()
+    node_cls = mod.Node
+    data = [[7, None], [13, 0], [11, 4], [10, 2], [1, 0]]
+    head = node_cls.from_nested_list(data)
+    copied = sol.copyRandomList(head)
+    assert copied is not None and copied.to_nested_list() == data
+    assert copied is not head
+    head_hm = node_cls.from_nested_list(data)
+    copied_hm = sol.copyRandomListHashMap(head_hm)
+    assert copied_hm is not None and copied_hm.to_nested_list() == data
+
+
