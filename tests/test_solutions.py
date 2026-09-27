@@ -403,3 +403,36 @@ def test_suite_copy_random_list():
     assert copied_hm is not None and copied_hm.to_nested_list() == data
 
 
+def test_suite_add_two_numbers():
+    mod = importlib.import_module("leetcode.0002_add_two_numbers")
+    sol = mod.Solution()
+    ln = mod.ListNode
+    l1 = ln.from_list([2, 4, 3])
+    l2 = ln.from_list([5, 6, 4])
+    res = sol.addTwoNumbers(l1, l2)
+    assert res is not None and res.to_list() == [7, 0, 8]
+    l1_zero = ln.from_list([0])
+    l2_zero = ln.from_list([0])
+    assert sol.addTwoNumbers(l1_zero, l2_zero).to_list() == [0]
+
+
+def test_suite_linked_list_cycle():
+    mod = importlib.import_module("leetcode.0141_linked_list_cycle")
+    sol = mod.Solution()
+    ln = mod.ListNode
+    l1 = ln.from_list_with_cycle([3, 2, 0, -4], 1)
+    assert sol.hasCycle(l1) is True
+    l2 = ln.from_list_with_cycle([1], -1)
+    assert sol.hasCycle(l2) is False
+    assert sol.hasCycle(None) is False
+
+
+def test_suite_find_the_duplicate_number():
+    mod = importlib.import_module("leetcode.0287_find_the_duplicate_number")
+    sol = mod.Solution()
+    assert sol.findDuplicate([1, 3, 4, 2, 2]) == 2
+    assert sol.findDuplicate([3, 1, 3, 4, 2]) == 3
+    assert sol.findDuplicate([3, 3, 3, 3, 3]) == 3
+    assert sol.findDuplicate([2, 5, 9, 6, 9, 3, 8, 9, 7, 1]) == 9
+
+

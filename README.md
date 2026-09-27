@@ -46,6 +46,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Linked List | Medium | [Python](leetcode/0143_reorder_list.py) | $O(n)$ | $O(1)$ | 2026-09-26 |
 | 0019 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Linked List | Medium | [Python](leetcode/0019_remove_nth_node_from_end_of_list.py) | $O(n)$ | $O(1)$ | 2026-09-26 |
 | 0138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Linked List | Medium | [Python](leetcode/0138_copy_list_with_random_pointer.py) | $O(n)$ | $O(1)$ | 2026-09-26 |
+| 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Linked List | Medium | [Python](leetcode/0002_add_two_numbers.py) | $O(\max(m, n))$ | $O(\max(m, n))$ | 2026-09-27 |
+| 0141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Linked List | Easy | [Python](leetcode/0141_linked_list_cycle.py) | $O(n)$ | $O(1)$ | 2026-09-27 |
+| 0287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Linked List | Medium | [Python](leetcode/0287_find_the_duplicate_number.py) | $O(n)$ | $O(1)$ | 2026-09-27 |
 
 
 
