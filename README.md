@@ -49,6 +49,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Linked List | Medium | [Python](leetcode/0002_add_two_numbers.py) | $O(\max(m, n))$ | $O(\max(m, n))$ | 2026-09-27 |
 | 0141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Linked List | Easy | [Python](leetcode/0141_linked_list_cycle.py) | $O(n)$ | $O(1)$ | 2026-09-27 |
 | 0287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Linked List | Medium | [Python](leetcode/0287_find_the_duplicate_number.py) | $O(n)$ | $O(1)$ | 2026-09-27 |
+| 0146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Linked List | Medium | [Python](leetcode/0146_lru_cache.py) | $O(1)$ | $O(\text{capacity})$ | 2026-09-28 |
+| 0023 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Linked List | Hard | [Python](leetcode/0023_merge_k_sorted_lists.py) | $O(N \log k)$ | $O(1)$ | 2026-09-28 |
+| 0025 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Linked List | Hard | [Python](leetcode/0025_reverse_nodes_in_k_group.py) | $O(n)$ | $O(1)$ | 2026-09-28 |
 
 
 

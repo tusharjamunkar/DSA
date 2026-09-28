@@ -436,3 +436,39 @@ def test_suite_find_the_duplicate_number():
     assert sol.findDuplicate([2, 5, 9, 6, 9, 3, 8, 9, 7, 1]) == 9
 
 
+def test_suite_lru_cache():
+    mod = importlib.import_module("leetcode.0146_lru_cache")
+    lru = mod.LRUCache(2)
+    lru.put(1, 1)
+    lru.put(2, 2)
+    assert lru.get(1) == 1
+    lru.put(3, 3)
+    assert lru.get(2) == -1
+    lru.put(4, 4)
+    assert lru.get(1) == -1
+    assert lru.get(3) == 3
+    assert lru.get(4) == 4
+
+
+def test_suite_merge_k_sorted_lists():
+    mod = importlib.import_module("leetcode.0023_merge_k_sorted_lists")
+    sol = mod.Solution()
+    ln = mod.ListNode
+    l1 = ln.from_list([1, 4, 5])
+    l2 = ln.from_list([1, 3, 4])
+    l3 = ln.from_list([2, 6])
+    res = sol.mergeKLists([l1, l2, l3])
+    assert res is not None and res.to_list() == [1, 1, 2, 3, 4, 4, 5, 6]
+    assert sol.mergeKLists([]) is None
+
+
+def test_suite_reverse_nodes_in_k_group():
+    mod = importlib.import_module("leetcode.0025_reverse_nodes_in_k_group")
+    sol = mod.Solution()
+    ln = mod.ListNode
+    l1 = ln.from_list([1, 2, 3, 4, 5])
+    assert sol.reverseKGroup(l1, 2).to_list() == [2, 1, 4, 3, 5]
+    l2 = ln.from_list([1, 2, 3, 4, 5])
+    assert sol.reverseKGroup(l2, 3).to_list() == [3, 2, 1, 4, 5]
+
+
