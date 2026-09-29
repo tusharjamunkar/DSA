@@ -472,3 +472,33 @@ def test_suite_reverse_nodes_in_k_group():
     assert sol.reverseKGroup(l2, 3).to_list() == [3, 2, 1, 4, 5]
 
 
+def test_suite_invert_binary_tree():
+    mod = importlib.import_module("leetcode.0226_invert_binary_tree")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([4, 2, 7, 1, 3, 6, 9])
+    assert sol.invertTree(t1).to_level_order() == [4, 7, 2, 9, 6, 3, 1]
+    t1_bfs = tn.from_level_order([4, 2, 7, 1, 3, 6, 9])
+    assert sol.invertTreeBFS(t1_bfs).to_level_order() == [4, 7, 2, 9, 6, 3, 1]
+    assert sol.invertTree(None) is None
+
+
+def test_suite_max_depth():
+    mod = importlib.import_module("leetcode.0104_maximum_depth_of_binary_tree")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([3, 9, 20, None, None, 15, 7])
+    assert sol.maxDepth(t1) == 3
+    assert sol.maxDepthBFS(t1) == 3
+    assert sol.maxDepth(None) == 0
+
+
+def test_suite_diameter_of_binary_tree():
+    mod = importlib.import_module("leetcode.0543_diameter_of_binary_tree")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([1, 2, 3, 4, 5])
+    assert sol.diameterOfBinaryTree(t1) == 3
+    assert sol.diameterOfBinaryTree(None) == 0
+
+

@@ -52,6 +52,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Linked List | Medium | [Python](leetcode/0146_lru_cache.py) | $O(1)$ | $O(\text{capacity})$ | 2026-09-28 |
 | 0023 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Linked List | Hard | [Python](leetcode/0023_merge_k_sorted_lists.py) | $O(N \log k)$ | $O(1)$ | 2026-09-28 |
 | 0025 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Linked List | Hard | [Python](leetcode/0025_reverse_nodes_in_k_group.py) | $O(n)$ | $O(1)$ | 2026-09-28 |
+| 0226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Trees | Easy | [Python](leetcode/0226_invert_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-09-29 |
+| 0104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Trees | Easy | [Python](leetcode/0104_maximum_depth_of_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-09-29 |
+| 0543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Trees | Easy | [Python](leetcode/0543_diameter_of_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-09-29 |
 
 
 
