@@ -55,6 +55,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Trees | Easy | [Python](leetcode/0226_invert_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-09-29 |
 | 0104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Trees | Easy | [Python](leetcode/0104_maximum_depth_of_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-09-29 |
 | 0543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Trees | Easy | [Python](leetcode/0543_diameter_of_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-09-29 |
+| 0110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Trees | Easy | [Python](leetcode/0110_balanced_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-09-30 |
+| 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Trees | Easy | [Python](leetcode/0100_same_tree.py) | $O(\min(n, m))$ | $O(\min(h_p, h_q))$ | 2026-09-30 |
+| 0572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Trees | Easy | [Python](leetcode/0572_subtree_of_another_tree.py) | $O(m \cdot n)$ | $O(h)$ | 2026-09-30 |
 
 
 

@@ -502,3 +502,44 @@ def test_suite_diameter_of_binary_tree():
     assert sol.diameterOfBinaryTree(None) == 0
 
 
+def test_suite_balanced_binary_tree():
+    mod = importlib.import_module("leetcode.0110_balanced_binary_tree")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([3, 9, 20, None, None, 15, 7])
+    assert sol.isBalanced(t1) is True
+    assert sol.isBalancedTuple(t1) is True
+    t2 = tn.from_level_order([1, 2, 2, 3, 3, None, None, 4, 4])
+    assert sol.isBalanced(t2) is False
+    assert sol.isBalanced(None) is True
+
+
+def test_suite_same_tree():
+    mod = importlib.import_module("leetcode.0100_same_tree")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    p1 = tn.from_level_order([1, 2, 3])
+    q1 = tn.from_level_order([1, 2, 3])
+    assert sol.isSameTree(p1, q1) is True
+    assert sol.isSameTreeBFS(p1, q1) is True
+    p2 = tn.from_level_order([1, 2])
+    q2 = tn.from_level_order([1, None, 2])
+    assert sol.isSameTree(p2, q2) is False
+    assert sol.isSameTree(None, None) is True
+
+
+def test_suite_subtree_of_another_tree():
+    mod = importlib.import_module("leetcode.0572_subtree_of_another_tree")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    r1 = tn.from_level_order([3, 4, 5, 1, 2])
+    s1 = tn.from_level_order([4, 1, 2])
+    assert sol.isSubtree(r1, s1) is True
+    assert sol.isSubtreeSerialization(r1, s1) is True
+    r2 = tn.from_level_order([3, 4, 5, 1, 2, None, None, None, None, 0])
+    s2 = tn.from_level_order([4, 1, 2])
+    assert sol.isSubtree(r2, s2) is False
+    assert sol.isSubtreeSerialization(r2, s2) is False
+
+
+
