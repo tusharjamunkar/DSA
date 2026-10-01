@@ -542,4 +542,42 @@ def test_suite_subtree_of_another_tree():
     assert sol.isSubtreeSerialization(r2, s2) is False
 
 
+def test_suite_lowest_common_ancestor_bst():
+    mod = importlib.import_module("leetcode.0235_lowest_common_ancestor_of_a_binary_search_tree")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    tree = tn.from_level_order([6, 2, 8, 0, 4, 7, 9, None, None, 3, 5])
+    assert tree is not None
+    p1 = tree.find_node(2)
+    q1 = tree.find_node(8)
+    assert p1 and q1
+    assert sol.lowestCommonAncestor(tree, p1, q1).val == 6
+    assert sol.lowestCommonAncestorRecursive(tree, p1, q1).val == 6
+    p2 = tree.find_node(2)
+    q2 = tree.find_node(4)
+    assert p2 and q2
+    assert sol.lowestCommonAncestor(tree, p2, q2).val == 2
+
+
+def test_suite_level_order_traversal():
+    mod = importlib.import_module("leetcode.0102_binary_tree_level_order_traversal")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([3, 9, 20, None, None, 15, 7])
+    assert sol.levelOrder(t1) == [[3], [9, 20], [15, 7]]
+    assert sol.levelOrderDFS(t1) == [[3], [9, 20], [15, 7]]
+    assert sol.levelOrder(None) == []
+
+
+def test_suite_right_side_view():
+    mod = importlib.import_module("leetcode.0199_binary_tree_right_side_view")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([1, 2, 3, None, 5, None, 4])
+    assert sol.rightSideView(t1) == [1, 3, 4]
+    assert sol.rightSideViewDFS(t1) == [1, 3, 4]
+    assert sol.rightSideView(None) == []
+
+
+
 

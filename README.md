@@ -58,6 +58,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Trees | Easy | [Python](leetcode/0110_balanced_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-09-30 |
 | 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Trees | Easy | [Python](leetcode/0100_same_tree.py) | $O(\min(n, m))$ | $O(\min(h_p, h_q))$ | 2026-09-30 |
 | 0572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Trees | Easy | [Python](leetcode/0572_subtree_of_another_tree.py) | $O(m \cdot n)$ | $O(h)$ | 2026-09-30 |
+| 0235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Trees | Medium | [Python](leetcode/0235_lowest_common_ancestor_of_a_binary_search_tree.py) | $O(h)$ | $O(1)$ | 2026-10-01 |
+| 0102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Trees | Medium | [Python](leetcode/0102_binary_tree_level_order_traversal.py) | $O(n)$ | $O(w)$ | 2026-10-01 |
+| 0199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Trees | Medium | [Python](leetcode/0199_binary_tree_right_side_view.py) | $O(n)$ | $O(w)$ | 2026-10-01 |
 
 
 
