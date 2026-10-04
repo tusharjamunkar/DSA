@@ -579,5 +579,42 @@ def test_suite_right_side_view():
     assert sol.rightSideView(None) == []
 
 
+def test_suite_count_good_nodes():
+    mod = importlib.import_module("leetcode.1448_count_good_nodes_in_binary_tree")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([3, 1, 4, 3, None, 1, 5])
+    assert sol.goodNodes(t1) == 4
+    assert sol.goodNodesBFS(t1) == 4
+    t2 = tn.from_level_order([3, 3, None, 4, 2])
+    assert sol.goodNodes(t2) == 3
+    assert sol.goodNodes(None) == 0
+
+
+def test_suite_validate_bst():
+    mod = importlib.import_module("leetcode.0098_validate_binary_search_tree")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([2, 1, 3])
+    assert sol.isValidBST(t1) is True
+    assert sol.isValidBSTInorder(t1) is True
+    t2 = tn.from_level_order([5, 1, 4, None, None, 3, 6])
+    assert sol.isValidBST(t2) is False
+    assert sol.isValidBSTInorder(t2) is False
+
+
+def test_suite_kth_smallest_bst():
+    mod = importlib.import_module("leetcode.0230_kth_smallest_element_in_a_bst")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([3, 1, 4, None, 2])
+    assert sol.kthSmallest(t1, 1) == 1
+    assert sol.kthSmallestRecursive(t1, 1) == 1
+    t2 = tn.from_level_order([5, 3, 6, 2, 4, None, None, 1])
+    assert sol.kthSmallest(t2, 3) == 3
+    assert sol.kthSmallestRecursive(t2, 3) == 3
+
+
+
 
 

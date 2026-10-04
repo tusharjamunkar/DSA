@@ -61,6 +61,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Trees | Medium | [Python](leetcode/0235_lowest_common_ancestor_of_a_binary_search_tree.py) | $O(h)$ | $O(1)$ | 2026-10-01 |
 | 0102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Trees | Medium | [Python](leetcode/0102_binary_tree_level_order_traversal.py) | $O(n)$ | $O(w)$ | 2026-10-01 |
 | 0199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Trees | Medium | [Python](leetcode/0199_binary_tree_right_side_view.py) | $O(n)$ | $O(w)$ | 2026-10-01 |
+| 1448 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | Trees | Medium | [Python](leetcode/1448_count_good_nodes_in_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-10-04 |
+| 0098 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Trees | Medium | [Python](leetcode/0098_validate_binary_search_tree.py) | $O(n)$ | $O(h)$ | 2026-10-04 |
+| 0230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Trees | Medium | [Python](leetcode/0230_kth_smallest_element_in_a_bst.py) | $O(h + k)$ | $O(h)$ | 2026-10-04 |
 
 
 
