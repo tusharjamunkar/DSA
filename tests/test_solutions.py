@@ -615,6 +615,40 @@ def test_suite_kth_smallest_bst():
     assert sol.kthSmallestRecursive(t2, 3) == 3
 
 
+def test_suite_build_tree_preorder_inorder():
+    mod = importlib.import_module("leetcode.0105_construct_binary_tree_from_preorder_and_inorder_traversal")
+    sol = mod.Solution()
+    pre1 = [3, 9, 20, 15, 7]
+    in1 = [9, 3, 15, 20, 7]
+    tree1 = sol.buildTree(pre1, in1)
+    assert tree1 is not None and tree1.to_level_order() == [3, 9, 20, None, None, 15, 7]
+    assert sol.buildTree([-1], [-1]).to_level_order() == [-1]
+
+
+def test_suite_max_path_sum():
+    mod = importlib.import_module("leetcode.0124_binary_tree_maximum_path_sum")
+    sol = mod.Solution()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([1, 2, 3])
+    assert sol.maxPathSum(t1) == 6
+    t2 = tn.from_level_order([-10, 9, 20, None, None, 15, 7])
+    assert sol.maxPathSum(t2) == 42
+    assert sol.maxPathSum(tn(-3)) == -3
+
+
+def test_suite_serialize_deserialize_tree():
+    mod = importlib.import_module("leetcode.0297_serialize_and_deserialize_binary_tree")
+    codec = mod.Codec()
+    codec_bfs = mod.CodecBFS()
+    tn = mod.TreeNode
+    t1 = tn.from_level_order([1, 2, 3, None, None, 4, 5])
+    assert codec.deserialize(codec.serialize(t1)).to_level_order() == [1, 2, 3, None, None, 4, 5]
+    assert codec_bfs.deserialize(codec_bfs.serialize(t1)).to_level_order() == [1, 2, 3, None, None, 4, 5]
+    assert codec.deserialize(codec.serialize(None)) is None
+    assert codec_bfs.deserialize(codec_bfs.serialize(None)) is None
+
+
+
 
 
 

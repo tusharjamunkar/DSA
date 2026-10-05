@@ -64,6 +64,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 1448 | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | Trees | Medium | [Python](leetcode/1448_count_good_nodes_in_binary_tree.py) | $O(n)$ | $O(h)$ | 2026-10-04 |
 | 0098 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Trees | Medium | [Python](leetcode/0098_validate_binary_search_tree.py) | $O(n)$ | $O(h)$ | 2026-10-04 |
 | 0230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Trees | Medium | [Python](leetcode/0230_kth_smallest_element_in_a_bst.py) | $O(h + k)$ | $O(h)$ | 2026-10-04 |
+| 0105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Trees | Medium | [Python](leetcode/0105_construct_binary_tree_from_preorder_and_inorder_traversal.py) | $O(n)$ | $O(n)$ | 2026-10-05 |
+| 0124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Trees | Hard | [Python](leetcode/0124_binary_tree_maximum_path_sum.py) | $O(n)$ | $O(h)$ | 2026-10-05 |
+| 0297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Trees | Hard | [Python](leetcode/0297_serialize_and_deserialize_binary_tree.py) | $O(n)$ | $O(n)$ | 2026-10-05 |
 
 
 
