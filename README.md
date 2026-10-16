@@ -67,6 +67,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Trees | Medium | [Python](leetcode/0105_construct_binary_tree_from_preorder_and_inorder_traversal.py) | $O(n)$ | $O(n)$ | 2026-10-05 |
 | 0124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Trees | Hard | [Python](leetcode/0124_binary_tree_maximum_path_sum.py) | $O(n)$ | $O(h)$ | 2026-10-05 |
 | 0297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Trees | Hard | [Python](leetcode/0297_serialize_and_deserialize_binary_tree.py) | $O(n)$ | $O(n)$ | 2026-10-05 |
+| 0208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Tries | Medium | [Python](leetcode/0208_implement_trie_prefix_tree.py) | $O(m)$ | $O(N \cdot m)$ | 2026-10-16 |
+| 0211 | [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | Tries | Medium | [Python](leetcode/0211_design_add_and_search_words_data_structure.py) | $O(m)$ | $O(N \cdot m)$ | 2026-10-16 |
+| 0212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Tries | Hard | [Python](leetcode/0212_word_search_ii.py) | $O(W \cdot L + M \cdot N \cdot 4 \cdot 3^{L-1})$ | $O(W \cdot L)$ | 2026-10-16 |
 
 
 

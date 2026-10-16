@@ -648,6 +648,45 @@ def test_suite_serialize_deserialize_tree():
     assert codec_bfs.deserialize(codec_bfs.serialize(None)) is None
 
 
+def test_suite_implement_trie():
+    mod = importlib.import_module("leetcode.0208_implement_trie_prefix_tree")
+    trie = mod.Trie()
+    trie.insert("apple")
+    assert trie.search("apple") is True
+    assert trie.search("app") is False
+    assert trie.startsWith("app") is True
+    trie.insert("app")
+    assert trie.search("app") is True
+
+
+def test_suite_word_dictionary():
+    mod = importlib.import_module("leetcode.0211_design_add_and_search_words_data_structure")
+    wd = mod.WordDictionary()
+    wd.addWord("bad")
+    wd.addWord("dad")
+    wd.addWord("mad")
+    assert wd.search("pad") is False
+    assert wd.search("bad") is True
+    assert wd.search(".ad") is True
+    assert wd.search("b..") is True
+
+
+def test_suite_word_search_ii():
+    mod = importlib.import_module("leetcode.0212_word_search_ii")
+    sol = mod.Solution()
+    board1 = [
+        ["o", "a", "a", "n"],
+        ["e", "t", "a", "e"],
+        ["i", "h", "k", "r"],
+        ["i", "f", "l", "v"]
+    ]
+    words1 = ["oath", "pea", "eat", "rain"]
+    assert sol.findWords([row[:] for row in board1], words1) == ["eat", "oath"]
+    board2 = [["a", "b"], ["c", "d"]]
+    assert sol.findWords(board2, ["abcb"]) == []
+
+
+
 
 
 
