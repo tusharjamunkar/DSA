@@ -70,6 +70,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Tries | Medium | [Python](leetcode/0208_implement_trie_prefix_tree.py) | $O(m)$ | $O(N \cdot m)$ | 2026-10-16 |
 | 0211 | [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | Tries | Medium | [Python](leetcode/0211_design_add_and_search_words_data_structure.py) | $O(m)$ | $O(N \cdot m)$ | 2026-10-16 |
 | 0212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Tries | Hard | [Python](leetcode/0212_word_search_ii.py) | $O(W \cdot L + M \cdot N \cdot 4 \cdot 3^{L-1})$ | $O(W \cdot L)$ | 2026-10-16 |
+| 0703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Heap / Priority Queue | Easy | [Python](leetcode/0703_kth_largest_element_in_a_stream.py) | $O(\log k)$ add | $O(k)$ | 2026-10-17 |
+| 1046 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | Heap / Priority Queue | Easy | [Python](leetcode/1046_last_stone_weight.py) | $O(n \log n)$ | $O(n)$ | 2026-10-17 |
+| 0973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | Heap / Priority Queue | Medium | [Python](leetcode/0973_k_closest_points_to_origin.py) | $O(n \log k)$ | $O(k)$ | 2026-10-17 |
 
 
 

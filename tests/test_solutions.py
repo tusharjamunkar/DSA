@@ -686,6 +686,32 @@ def test_suite_word_search_ii():
     assert sol.findWords(board2, ["abcb"]) == []
 
 
+def test_suite_kth_largest_stream():
+    mod = importlib.import_module("leetcode.0703_kth_largest_element_in_a_stream")
+    kl = mod.KthLargest(3, [4, 5, 8, 2])
+    assert kl.add(3) == 4
+    assert kl.add(5) == 5
+    assert kl.add(10) == 5
+    assert kl.add(9) == 8
+    assert kl.add(4) == 8
+
+
+def test_suite_last_stone_weight():
+    mod = importlib.import_module("leetcode.1046_last_stone_weight")
+    sol = mod.Solution()
+    assert sol.lastStoneWeight([2, 7, 4, 1, 8, 1]) == 1
+    assert sol.lastStoneWeight([1]) == 1
+    assert sol.lastStoneWeight([2, 2]) == 0
+
+
+def test_suite_k_closest_points():
+    mod = importlib.import_module("leetcode.0973_k_closest_points_to_origin")
+    sol = mod.Solution()
+    assert sol.kClosest([[1, 3], [-2, 2]], 1) == [[-2, 2]]
+    assert sorted(sol.kClosest([[3, 3], [5, -1], [-2, 4]], 2)) == sorted([[3, 3], [-2, 4]])
+
+
+
 
 
 
