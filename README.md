@@ -73,6 +73,9 @@ Curated solutions to LeetCode problems, algorithm design patterns, and computer 
 | 0703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Heap / Priority Queue | Easy | [Python](leetcode/0703_kth_largest_element_in_a_stream.py) | $O(\log k)$ add | $O(k)$ | 2026-10-17 |
 | 1046 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | Heap / Priority Queue | Easy | [Python](leetcode/1046_last_stone_weight.py) | $O(n \log n)$ | $O(n)$ | 2026-10-17 |
 | 0973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | Heap / Priority Queue | Medium | [Python](leetcode/0973_k_closest_points_to_origin.py) | $O(n \log k)$ | $O(k)$ | 2026-10-17 |
+| 0215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Heap / Priority Queue | Medium | [Python](leetcode/0215_kth_largest_element_in_an_array.py) | $O(n \log k)$ | $O(k)$ | 2026-10-18 |
+| 0621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Heap / Priority Queue | Medium | [Python](leetcode/0621_task_scheduler.py) | $O(T)$ | $O(1)$ | 2026-10-18 |
+| 0355 | [Design Twitter](https://leetcode.com/problems/design-twitter/) | Heap / Priority Queue | Medium | [Python](leetcode/0355_design_twitter.py) | $O(F + 10 \log F)$ | $O(F)$ | 2026-10-18 |
 
 
 

@@ -711,6 +711,35 @@ def test_suite_k_closest_points():
     assert sorted(sol.kClosest([[3, 3], [5, -1], [-2, 4]], 2)) == sorted([[3, 3], [-2, 4]])
 
 
+def test_suite_kth_largest_array():
+    mod = importlib.import_module("leetcode.0215_kth_largest_element_in_an_array")
+    sol = mod.Solution()
+    assert sol.findKthLargest([3, 2, 1, 5, 6, 4], 2) == 5
+    assert sol.findKthLargestQuickselect([3, 2, 1, 5, 6, 4], 2) == 5
+    assert sol.findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4) == 4
+
+
+def test_suite_task_scheduler():
+    mod = importlib.import_module("leetcode.0621_task_scheduler")
+    sol = mod.Solution()
+    assert sol.leastInterval(["A", "A", "A", "B", "B", "B"], 2) == 8
+    assert sol.leastIntervalHeap(["A", "A", "A", "B", "B", "B"], 2) == 8
+    assert sol.leastInterval(["A", "C", "A", "B", "D", "B"], 1) == 6
+
+
+def test_suite_design_twitter():
+    mod = importlib.import_module("leetcode.0355_design_twitter")
+    tw = mod.Twitter()
+    tw.postTweet(1, 5)
+    assert tw.getNewsFeed(1) == [5]
+    tw.follow(1, 2)
+    tw.postTweet(2, 6)
+    assert tw.getNewsFeed(1) == [6, 5]
+    tw.unfollow(1, 2)
+    assert tw.getNewsFeed(1) == [5]
+
+
+
 
 
 
